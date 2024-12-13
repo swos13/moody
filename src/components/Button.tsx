@@ -18,5 +18,9 @@ export default function Button() {
     }
   };
 
-  return <button onClick={handleAddUser}>Add user</button>;
+  return (
+    <button className="bg-mood-happy" onClick={handleAddUser}>
+      Add user
+    </button>
+  );
 }
