@@ -7,6 +7,10 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      inter: ["var(--font-inter)"],
+      irish_grover: ["var(--irish-grover)"],
+    },
     extend: {
       colors: {
         main: "#508BBB",
