@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 export default {
@@ -7,24 +8,25 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    fontFamily: {
-      inter: ["var(--font-inter)"],
-      irish_grover: ["var(--irish-grover)"],
-    },
     extend: {
+      fontFamily: {
+        inter: ["Inter, sans-serif"],
+        irish_grover: ["Irish Grover, serif"],
+      },
       colors: {
-        main: "#508BBB",
-        "main-darker": "#356790",
+        main: "#3A8D9C",
+        "main-darker": "#307986",
         background: "#F4F7FF",
+        "text-light": "#F4F7FF",
         input: "#D8DEE4",
         foreground: "var(--foreground)",
         mood: {
-          happy: "#6DD1C9",
-          excellent: "#47B426",
-          neutral: "#B7BB50",
-          angry: "#BB5052",
-          sad: "#5062BB",
-          "not-set": "#9F9F9F",
+          happy: "#A2D74E",
+          calm: "#FFFACD",
+          neutral: "#9E9E9E",
+          sad: "#5F87B2",
+          stressed: "#E98742",
+          angry: "#D84A4A",
           default: "#D9D9D9",
         },
       },
