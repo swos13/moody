@@ -1,19 +1,26 @@
 "use client";
 
-import { useState } from "react";
-import Input from "@/components/Input";
+import { useForm } from "react-hook-form";
+import FormInput from "@/components/FormInput";
+import Image from "next/image";
 
 export default function Login() {
-  const [login, setLogin] = useState<string>("");
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLogin(e.target.value);
-  };
+  const { handleSubmit } = useForm();
+  const onSubmit = (inputs: any) => console.log(inputs);
 
   return (
-    <>
-      <div className={`font-irish_grover`}>This is Login</div>
-      <Input value={login} handleChange={handleChange} />
-    </>
+    <section className="h-full flex justify-center items-center flex-col">
+      <Image src="" alt="moody logo" />
+      <form
+        className="flex justify-center items-center flex-col"
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <FormInput label="Login" id="login" />
+        <FormInput label="Password" id="password" />
+
+        <button>Sign In</button>
+      </form>
+    </section>
   );
 }
+1;
