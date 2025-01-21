@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import FormInput from "@/components/FormInput";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Login() {
   const { handleSubmit } = useForm();
@@ -10,17 +11,29 @@ export default function Login() {
 
   return (
     <section className="h-full flex justify-center items-center flex-col">
-      <Image src="" alt="moody logo" />
+      <Image
+        src="/logo-main.svg"
+        alt="moody logo"
+        width={310}
+        height={105}
+        className={"mb-4"}
+      />
+      <p className="mb-6">Log into your account</p>
       <form
-        className="flex justify-center items-center flex-col"
+        className="flex justify-center items-center flex-col gap-4"
         onSubmit={handleSubmit(onSubmit)}
       >
         <FormInput label="Login" id="login" />
         <FormInput label="Password" id="password" />
 
-        <button>Sign In</button>
+        <button type="submit" className="mt-4">
+          Sign In
+        </button>
       </form>
+      <div className="flex flex-col justify-center items-center mt-6">
+        <p>Don't have an account?</p>
+        <Link href="/sign-up">Sign up</Link>
+      </div>
     </section>
   );
 }
-1;

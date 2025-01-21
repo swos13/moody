@@ -3,3 +3,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  label,
+  p,
+  a {
+    @apply text-sm;
+  }
+
+  a {
+    @apply text-main;
+    @apply font-bold;
+  }
+}

@@ -1,13 +1,9 @@
+import Image from "next/image";
+
 export default function HeaderAuth() {
   return (
     <header className="bg-main h-[80px] flex justify-center align-center">
-      <h1
-        className={
-          "text-text-light font-irish_grover text-5xl flex items-center"
-        }
-      >
-        Moody
-      </h1>
+      <Image src="/logo-white.svg" alt="logo" width={48} height={48} />
     </header>
   );
 }
