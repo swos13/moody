@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import FormInput from "@/components/FormInput";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "@/components/Button";
 
 export default function Login() {
   const { handleSubmit } = useForm();
@@ -26,9 +27,11 @@ export default function Login() {
         <FormInput label="Login" id="login" />
         <FormInput label="Password" id="password" />
 
-        <button type="submit" className="mt-4">
-          Sign In
-        </button>
+        <Button
+          text="Log In"
+          handleClick={handleSubmit(onSubmit)}
+          componentStyles={"mt-4"}
+        />
       </form>
       <div className="flex flex-col justify-center items-center mt-6">
         <p>Don't have an account?</p>

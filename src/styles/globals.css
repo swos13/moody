@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply font-inter;
+  }
+
   label,
   p,
   a {
@@ -14,5 +18,9 @@
   a {
     @apply text-main;
     @apply font-bold;
+  }
+
+  a:active {
+    @apply text-main-active;
   }
 }

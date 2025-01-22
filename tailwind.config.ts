@@ -16,6 +16,7 @@ export default {
       colors: {
         main: "#3A8D9C",
         "main-darker": "#307986",
+        "main-active": "#245862",
         background: "#F4F7FF",
         "text-light": "#F4F7FF",
         input: "#D8DEE4",
