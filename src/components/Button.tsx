@@ -40,7 +40,6 @@ export default function Button({
   // };
 
   const [styles, setStyles] = useState<string>(buttonStyles.contained);
-  console.log(styles);
 
   useEffect(() => {
     const variantStyles =
@@ -49,8 +48,6 @@ export default function Button({
         : buttonStyles.outlined;
     setStyles(variantStyles);
   }, [variant]);
-
-  console.log(styles);
 
   return (
     <button
